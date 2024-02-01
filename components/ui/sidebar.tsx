@@ -1,3 +1,5 @@
+
+import Image from "next/image";
 import { LayoutDashboard, Settings, CircleUserRound   } from 'lucide-react';
 
 const SidebardIconCard = ({ children }: any) => {
@@ -11,6 +13,13 @@ const SidebardIconCard = ({ children }: any) => {
 const Sidebard = () => {
     return(
         <div className="h-screen flex flex-col items-center gap-1 p-2 border-r-2 border-slate-200">
+
+            <Image
+                src="/images/logo.svg"
+                alt="Logo"
+                width={48}
+                height={48}
+            />
 
             <SidebardIconCard>
                 <LayoutDashboard size={24} />
