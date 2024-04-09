@@ -1,4 +1,6 @@
 import Image from "next/image";
+import RegisterForm from "./components/register-form";
+import LoginForm from "./components/login-form";
 
 const Login = () => {
     return(
@@ -16,7 +18,8 @@ const Login = () => {
                     </div>
 
                     <div className="flex p-4">
-                        form
+                        <LoginForm />
+                        {/* <RegisterForm /> */}
                     </div>
 
                 </div>
