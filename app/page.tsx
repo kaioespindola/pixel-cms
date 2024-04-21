@@ -1,13 +1,14 @@
 import Navbar from "@/components/ui/navbar"
 import Sidebar from "@/components/ui/sidebar"
-
-import { getServerSession } from "next-auth"
-import { options } from "@/lib/options"
+import { createSessionClient } from "@/lib/appwrite"
 
 const Home = async () => {
 
-    const session = await getServerSession(options)
-    const user = session?.user
+    const account = await createSessionClient()
+
+    const user = await account.get()
+
+    console.log(user)
 
     return (
         <div className="flex">
@@ -15,7 +16,7 @@ const Home = async () => {
             <div className="w-full">
                 <Navbar />
                 <div className="p-6">
-                    Homepage aqui: {user && user.email} | {user && user.name}
+                    Homepage aqui: {user?.name} | {user?.email}
                 </div>
             </div>
         </div>

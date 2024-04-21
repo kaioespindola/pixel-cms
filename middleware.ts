@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import { cookies } from "next/headers";
+import { createSessionClient } from "./lib/appwrite";
 
 export const config = {
     matcher: [
@@ -14,6 +16,13 @@ export const config = {
 }
 
 export default async function middleware(req: NextRequest) {
+
+    // const sessionToken = req.cookies.get("session");
+
+    // if (!sessionToken) {
+    //     return NextResponse.redirect("http://localhost:3000/login");
+    // }
+
     // const url = req.nextUrl;
 
     // const hostname = req.headers

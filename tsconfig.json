@@ -32,7 +32,7 @@
         "**/*.ts",
         "**/*.tsx",
         ".next/types/**/*.ts"
-, "lib/options.ts"    ],
+, "lib/options.ts", "app/auth/callback/route.js"    ],
     "exclude": [
         "node_modules"
     ]
